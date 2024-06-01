@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="oshibka.css"?>
+
+<termscont>
+<terms>
+<main>
+<zag >Ой ошибка заказа</zag>
+
+<podzag>Кажется на этом сайте нет возможности заказать нашу продукцию онлайн. Позвоните в отдел продаж</podzag>
+<info>+375(29)859-50-40</info>
+
+
+
+<podzag>Или же вы можете пожертвовать создателю этого сайта символическую сумму</podzag>
+<info>Номер карты: 4255 1901 0445 9303</info>
+<info>вы вернётесь на предыдущую страницу через 10 секунд...</info>
+</main>
+</terms>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../js/xmljs.js"> </script>
+</termscont>

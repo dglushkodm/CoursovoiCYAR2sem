@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "Roboto";  
+    src: url("../fonts/Roboto-Thin.ttf") format("truetype"); 
+    font-style: normal; 
+}
+$main_text_color: rgb(0, 0, 0);
+@mixin flexCentered{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    min-width: 300px;
+    text-rendering: optimizeLegibility;
+}
+.text_head{
+    margin: 0;
+    color: rgb(245, 229, 251);
+    font-weight: 600;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+.text_main{
+    margin: 0;
+    color: #000000;
+    font-weight: 600;
+    font-family: "Roboto";
+}
+.text_footer{
+    margin: 0;
+    color: black;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+header{
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 12vh;
+    width: 100%;
+    background: linear-gradient(269.91deg, rgba(115, 119, 228, 1) 0%, rgba(242, 103, 154, 1) 98.16%);
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+    img{
+        width: clamp(200px, 100%, 350px);
+    }
+    .logo{
+        display: flex;
+        width: 50%;
+        align-items: center;
+        a{
+            width: clamp(200px, 50%, 350px);
+        }
+    }
+    .btn{
+        padding: 1rem;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 3px; 
+    }
+}
+
+.header{
+    &_btn{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: 50%;
+        div{
+            width: 33%;
+            display: inline-block;
+            text-align: center;
+        }
+        a{
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            transition: 0.4s all ease;
+            &:hover{
+                color: #cdcdcd;
+                transition: 0.4s all ease;
+                &::after{
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+            &::after{
+                content: ' ';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: -5px;
+                left: 0;
+                background-color: #0051ff;
+                transform-origin: bottom right;
+                transition: transform 0.5s ease-out;
+            }
+            &:focus{
+                color:#666e76;
+            }
+        }
+    }
+}
+.main{
+    width: 100%;
+    background: url(../img/fon5.svg) no-repeat;
+    z-index: -1;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.footer{
+    height: 150px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(113, 117, 228, 0.3) 0%, rgba(249, 54, 126, 0.3) 100%); 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0 0 150px rgb(182, 107, 133);
+    &_tel{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    &_socseti{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    &_socseti_block{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 600px){
+.header_btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background: #c59dd3;
+    width: 100%;
+    transition: all 0.4s ease;
+    left:-100%;
+} 
+.header_btn.open-menu{
+    left:0;
+}
+.burger_menu {
+    position: relative;
+    width: 40px;
+    height: 35px;
+    display: block;
+    margin-left: 10px;
+    float: right;
+    span, &::after, &::before{
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background: #000000;
+        margin: 0 auto; 
+    }
+    span{
+        top: 16px;
+    }
+    &::after, &::before{
+        content: '';
+    }
+    &::after{
+        bottom: 5px;
+    }
+    &::before{
+        top: 5px;
+    }
+}
+.burger_menu.open-menu{ 
+    span {
+        opacity:0; 
+        transition: 0.5s; 
+    }
+    &::before {
+        transform: rotate(38deg);
+        top: 16px;
+        transition: 0.4s;
+    }
+    &::after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s;
+    }  
+}
+header {
+    height: 60px;
+    justify-content: space-around;
+}
+.footer{
+    font-size: 12px;
+    height: 100px;
+}
+}

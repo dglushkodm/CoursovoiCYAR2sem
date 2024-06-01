@@ -1,0 +1,97 @@
+.first_block hr {
+  margin: 0;
+  color: #000000;
+  margin-top: 1vh;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  height: 3px;
+  width: clamp(150px, 20%, 250px);
+}
+
+.dop_ruk hr {
+  margin: 0;
+  color: #000000;
+  margin-top: 1vh;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  height: 3px;
+  width: 55%;
+}
+
+.contact {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+.first_block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.first_block img {
+  width: clamp(200px, 25%, 300px);
+  height: 60%;
+}
+
+.dop_ruk {
+  margin-top: 4vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.dop_ruk div {
+  width: clamp(200px, 25%, 300px);
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+  background: url(../img/fon5.svg) no-repeat;
+  z-index: -1;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+}
+main h1:first-child {
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 3vh;
+}
+main h2 {
+  text-align: center;
+}
+
+#back2Top {
+  width: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  background-color: #DDD;
+  color: #555;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+#back2Top:hover {
+  background-color: #DDF;
+  color: #000;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=contacts.css.map */
